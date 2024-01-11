@@ -50,7 +50,9 @@
    ```
    [user@sahara ~]$ cat
    ```
+   
    (no output)
+   
    ---
 3. Path to a directory as an argument
    ```
