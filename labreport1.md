@@ -1,6 +1,6 @@
 # Lab Report 1
 
-## Command: cd (Change Directory) 
+## Command: `cd (Change Directory) 
 
 1. No arguments
    
@@ -11,7 +11,7 @@
 3. Path to a file as an argument
    
 
-## Command: ls (List Files) 
+## Command: `ls (List Files) 
 
 1. No arguments
    
@@ -22,7 +22,7 @@
 3. Path to a file as an argument
    
 
-## Command: cat (Concatenate) 
+## Command: `cat (Concatenate) 
 
 1. No arguments
    
