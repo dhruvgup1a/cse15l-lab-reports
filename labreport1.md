@@ -7,6 +7,7 @@
    [user@sahara ~]$ cd
    [user@sahara ~]$ 
    ```
+   Working Directory: user@sahara
    ---
 2. Path to a directory as an argument
    ```
