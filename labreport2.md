@@ -54,19 +54,20 @@ class ChatServer {
         Server.start(port, new Handler());
     }
 }
-```
-
-
-![Image](lab2pic1.png)
-
-
-
-![Image](lab2pic2.png)
-
-
+```  
+  
+  
+![Image](lab2pic1.png)  
+  
+  
+  
+![Image](lab2pic2.png)  
+  
+  
 # Part 2
 
 
+  
 # Part 3
-
+  
 
