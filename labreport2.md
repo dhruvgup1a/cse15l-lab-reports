@@ -90,6 +90,7 @@ class ChatServer {
   
 # Part 2
 
+![Image](lab2pic3.png)  
 
   
 # Part 3
