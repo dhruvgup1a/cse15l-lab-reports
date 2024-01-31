@@ -93,5 +93,6 @@ class ChatServer {
 
   
 # Part 3
-  
+
+Something that I learned from the labs in the past 2 weeks which I didn't know earlier would be the ability to copy files over from a github repository into your local computer through the command line. Additionally, it is cool to see how we can host a remote server through the UCSD network using our login to run a server with whatever code we want to and anyone can access it. 
 
