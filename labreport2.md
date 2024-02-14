@@ -90,15 +90,15 @@ class ChatServer {
   
 # Part 2
 
-## Absolute path to the private key for your SSH key for logging into `ieng6`
+### Absolute path to the private key for your SSH key for logging into `ieng6`
 ![Image](lab2pic3.png) 
 
 
-## Absolute path to the public key for your SSH key for logging into `ieng6`
+### Absolute path to the public key for your SSH key for logging into `ieng6`
 ![Image](lab2pic3.png) 
 
 
-## A terminal interaction where you log into your `ieng6` account without being asked for a password 
+### A terminal interaction where you log into your `ieng6` account without being asked for a password 
 ![Image](lab2pic3.png)  
 
   
