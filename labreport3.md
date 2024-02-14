@@ -3,7 +3,8 @@
 ## Part 1 - Bugs 
 ### A failure-inducing input for the buggy program
 
-Input: `{1, 2, 3, 4, 5, 6}`  
+Input: `{1, 2, 3, 4, 5, 6}`
+
 JUnit Test Code for `testReverseInPlace2`: 
 ```
 @Test 
