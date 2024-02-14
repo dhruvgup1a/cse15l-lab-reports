@@ -86,8 +86,8 @@ public class ArrayTests {
     assertArrayEquals(new int[]{ 3 }, input1);
   }
 
-  @Test 
-	public void testReverseInPlace2() {
+  @Test
+  public void testReverseInPlace2() {
     int[] input1 = { 1, 2, 3, 4, 5, 6 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 6, 5, 4, 3, 2, 1 }, input1);
@@ -120,7 +120,7 @@ static void reverseInPlace(int[] arr) {
 ```
 
 ### Why the fix addresses the issue? 
-
+In the former method implementation, the method would be successfully reverse the first half of the list. However, after the first half, it would create a palindrome within the array since it would be recieving its data from the updated list, which is updating chronilogically in the list after every iteration in the loop. Therefore, this issue needs to be fixed by updating the values in the beginning and end of the list at the same time. In order to do so, we can create a local variable that will store the value of the index which we are about to change and afterwords we will update the first and last element in the array and iterate till we get to the middle to successfully reverse the elements in the array. 
 
 ## Part 2 - Researching Commands 
 
