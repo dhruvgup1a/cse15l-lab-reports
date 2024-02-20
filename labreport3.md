@@ -122,6 +122,33 @@ static void reverseInPlace(int[] arr) {
 ### Why the fix addresses the issue? 
 In the former method implementation, the method would successfully reverse the first half of the list. However, after the first half, it would create a palindrome within the array since it would be recieving its data from the updated list, which is updating chronilogically in the list after every iteration in the loop. Therefore, this issue needs to be fixed by updating the values in the beginning and end of the list at the same time. In order to do so, we can create a local variable that will store the value of the index we are about to change and afterwords we will update the first and last element in the array and iterate till we get to the middle to successfully reverse the elements in the array. 
 
-## Part 2 - Researching Commands 
+## Part 2 - Researching Commands (`find`)
+
+The `find` command has many options that users can use to filter directories. Below are 4 different techniques users can use to effectively use the `find` command. 
+
+### `-size n`
+```
+dgupta@Dhruvs-MacBook-Pro technical % find . -type f -size +10M                    
+./government/About_LSC/commission_report-hepple.xml
+./government/Env_Prot_Agen/tech_adden-hepple.xml
+./government/Env_Prot_Agen/multi102902-hepple.xml
+./government/Env_Prot_Agen/bill-hepple.xml
+./government/Gen_Account_Office/d01591sp-hepple.xml
+./government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed-hepple.xml
+./government/Gen_Account_Office/pe1019-hepple.xml
+./government/Gen_Account_Office/Statements_Feb28-1997_volume-hepple.xml
+./911report/chapter-13.5-hepple.xml
+./911report/chapter-3-hepple.xml
+./911report/chapter-13.4-hepple.xml
+```
+
+
+### `-m -time n`
+
+
+### `-newer checkfile`
+
+
+### `-type c`
 
 
