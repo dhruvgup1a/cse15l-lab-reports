@@ -129,7 +129,7 @@ The `find` command has many options that users can use to filter directories whi
 ### `-type c`
 By using the format `find [starting_directory] -type [c]` to search through directores, the command allows the user to search for specific file types. The user is able to chose their `[starting_directory]` to start from and the `[c]` allows the user to specify the file type (such as `d` for directories or `f` for regular files).
 
-# Example 1
+#### Example 1
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d
 ./technical
@@ -146,7 +146,7 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d
 ```
 In this example, we can see how the command allowed us to find all directories within the `./technical` directory. This is useful for specifying whether we are searching for a directory or regular files. 
 
-# Example 2
+#### Example 2
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -name "*.txt" -size -1k
 ./technical/plos/pmed.0020191.txt
@@ -158,7 +158,7 @@ In this example, we can see how the command allowed us to find regular files wit
 
 By using the format `find [starting_directory] -type f -size [±][size][c]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from, the `[±]` indicates whether it will be a greater than or less than comparsion, `[size]` specifies the size threshold, and `[c]` specifies the unit of measurement (such as `M` for megabytes, `G` for gigabytes, or `k` for kilobytes). Additionally, `-type f -size` specifies that we are searching for regular files with a specific size criteria. 
 
-# Example 1
+#### Example 1
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size +10M
 ./technical/government/About_LSC/commission_report-hepple.xml
@@ -175,7 +175,7 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size +10M
 ```
 In this example, we can see how the command allowed us to find files within the `./technical` directory that are greater than 10 megabytes. This is useful in finding large files and managing disk space. 
 
-# Example 2
+#### Example 2
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size -1k
 ./technical/plos/pmed.0020191.txt
@@ -187,7 +187,7 @@ In this example, we can see how the command allowed us to find files within the 
 
 By using the format `find [starting_directory] -maxdepth [n]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from and the `[n]` specifies the maximum depth of the search in the search directory. 
 
-# Example 1
+#### Example 1
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -maxdepth 1 
 ./technical
@@ -198,7 +198,7 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -maxdepth 1
 ```
 In this example, we can how the command allows us to view all of the files within the `./technical` that have a max depth of 1. This is useful for focusing on immediate contents and efficient searching. 
 
-# Example 2
+#### Example 2
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size +10M -maxdepth 2 
 ./technical/911report/chapter-13.5-hepple.xml
@@ -211,7 +211,7 @@ In this example, we can how the command can be used with other find commands to 
 
 By using the format `find [starting_directory] -mindepth [n]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from and the `[n]` specifies the minimum depth of the search in the search directory. 
 
-# Example 1
+#### Example 1
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d -mindepth 2
 ./technical/government/About_LSC
