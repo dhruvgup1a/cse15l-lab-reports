@@ -242,7 +242,7 @@ In this example, we can how the command can be used with other find commands to 
 
 ### Works Cited
 
-* [https://docs.oracle.com/cd/E19253-01/806-7612/files-tbl-1/index.html]
+* https://docs.oracle.com/cd/E19253-01/806-7612/files-tbl-1/index.html
 * `man find`
 
 
