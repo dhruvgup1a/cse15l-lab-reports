@@ -144,6 +144,15 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d
 ./technical/biomed
 ./technical/911report
 ```
+In this example, we can see how the command allowed us to find all directories within the `./technical` directory. This is useful for specifying whether we are searching for a directory or regular files. 
+
+## Example 2
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -name "*.txt" -size -1k
+./technical/plos/pmed.0020191.txt
+./technical/plos/pmed.0020226.txt
+```
+In this example, we can see how the command allowed us to find regular files within the `./technical` directory that are `.txt` files and have a size less than 1 kilobyte. This is useful in helping us distinguish between regular files and directories when searching for a specific file type and size criteria. 
 
 ### `-size n`
 
