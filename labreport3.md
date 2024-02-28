@@ -124,11 +124,30 @@ In the former method implementation, the method would successfully reverse the f
 
 ## Part 2 - Researching Commands (`find`)
 
-The `find` command has many options that users can use to filter directories. Below are 4 different techniques users can use to effectively use the `find` command. 
+The `find` command has many options that users can use to filter directories which users can mix and match to find their desired files. Below are 4 different ways users can effectively use the `find` command. 
+
+### `-type c`
+By using the format `find [starting_directory] -type [c]` to search through directores, the command allows the user to search for specific file types. The user is able to chose their `[starting_directory]` to start from and the `[c]` allows the user to specify the file type (such as `d` for directories or `f` for regular files).
+
+## Example 1
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d
+./technical
+./technical/government
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Gen_Account_Office
+./technical/government/Post_Rate_Comm
+./technical/government/Media
+./technical/plos
+./technical/biomed
+./technical/911report
+```
 
 ### `-size n`
 
-By using the format `find [starting_directory] -type f -size [±][size][c]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from, the `[±]` indicates whether it will be a greater than or less than comparsion, `[size]` specifies the size threshold, and `[c]` specifies the unit of measurement (such as `M` for megabytes, `G` for gigabytes, or `k` for kilobytes). Additionally, `-type f -size` specifies that we are searching for files with a specific size criterion. 
+By using the format `find [starting_directory] -type f -size [±][size][c]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from, the `[±]` indicates whether it will be a greater than or less than comparsion, `[size]` specifies the size threshold, and `[c]` specifies the unit of measurement (such as `M` for megabytes, `G` for gigabytes, or `k` for kilobytes). Additionally, `-type f -size` specifies that we are searching for regular files with a specific size criteria. 
 
 ## Example 1
 ```
@@ -155,13 +174,63 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size -1k
 ```
 In this example, we can see how the command allowed us to find files within the `./technical` directory that are less than 1 kilobyte. This is useful in finding small files that are redundant and don't have much need or use. 
 
-### `-type c`
+### `-maxdepth n`
 
+By using the format `find [starting_directory] -maxdepth [n]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from and the `[n]` specifies the maximum depth of the search in the search directory. 
 
-### `-m -time n`
+### Example 1
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -maxdepth 1 
+./technical
+./technical/government
+./technical/plos
+./technical/biomed
+./technical/911report
+```
+In this example, we can how the command allows us to view all of the files within the `./technical` that have a max depth of 1. This is useful for focusing on immediate contents and efficient searching. 
 
+### Example 2
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size +10M -maxdepth 2 
+./technical/911report/chapter-13.5-hepple.xml
+./technical/911report/chapter-3-hepple.xml
+./technical/911report/chapter-13.4-hepple.xml
+```
+In this example, we can how the command can be used with other find commands to filter the files in the `./technical` directory that are regular files, have a size greater than 10 megabytes, and at a max depth of 2. This is useful for filtering results to find really specific files that would take too much time to manually look for. 
 
-### `-newer checkfile`
+### `-mindepth n`
+
+By using the format `find [starting_directory] -mindepth [n]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from and the `[n]` specifies the minimum depth of the search in the search directory. 
+
+### Example 1
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d -mindepth 2
+./technical/government/About_LSC
+./technical/government/Env_Prot_Agen
+./technical/government/Alcohol_Problems
+./technical/government/Gen_Account_Office
+./technical/government/Post_Rate_Comm
+./technical/government/Media
+```
+In this example, we can how the command allows us to view all of the directories within the `./technical` that have a min depth of 2. This is useful for finding how deep the subdirectories go. 
+
+### Example 2
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -maxdepth 4 -size +10M -mindepth 2
+./technical/government/About_LSC/commission_report-hepple.xml
+./technical/government/Env_Prot_Agen/tech_adden-hepple.xml
+./technical/government/Env_Prot_Agen/multi102902-hepple.xml
+./technical/government/Env_Prot_Agen/bill-hepple.xml
+./technical/government/Gen_Account_Office/d01591sp-hepple.xml
+./technical/government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed-hepple.xml
+./technical/government/Gen_Account_Office/pe1019-hepple.xml
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume-hepple.xml
+./technical/911report/chapter-13.5-hepple.xml
+./technical/911report/chapter-3-hepple.xml
+./technical/911report/chapter-13.4-hepple.xml
+```
+In this example, we can how the command can be used with other find commands to filter the files in the `./technical` directory that are regular files, have a size greater than 10 megabytes, have a max depth of 4, and a min depth of 2. This is useful for filtering results to find really specific files that would take too much time to manually look for. This specific case is useful for evaluating file managment. 
+
 
 
 
