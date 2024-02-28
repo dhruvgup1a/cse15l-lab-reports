@@ -223,7 +223,7 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type d -mindepth 2
 ```
 In this example, we can how the command allows us to view all of the directories within the `./technical` that have a min depth of 2. This is useful for finding how deep the subdirectories go. 
 
-# Example 2
+#### Example 2
 ```
 dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -maxdepth 4 -size +10M -mindepth 2
 ./technical/government/About_LSC/commission_report-hepple.xml
