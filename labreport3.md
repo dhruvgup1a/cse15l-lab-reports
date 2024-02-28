@@ -127,20 +127,35 @@ In the former method implementation, the method would successfully reverse the f
 The `find` command has many options that users can use to filter directories. Below are 4 different techniques users can use to effectively use the `find` command. 
 
 ### `-size n`
+
+By using the format `find [starting_directory] -type f -size [±][size][c]` to search through the directories, the command allows the user to decide which `[starting_directory]` to searching from, the `[±]` indicates whether it will be a greater than or less than comparsion, `[size]` specifies the size threshold, and `[c]` specifies the unit of measurement (such as `M` for megabytes, `G` for gigabytes, or `k` for kilobytes). Additionally, `-type f -size` specifies that we are searching for files with a specific size criterion. 
+
+## Example 1
 ```
-dgupta@Dhruvs-MacBook-Pro technical % find . -type f -size +10M                    
-./government/About_LSC/commission_report-hepple.xml
-./government/Env_Prot_Agen/tech_adden-hepple.xml
-./government/Env_Prot_Agen/multi102902-hepple.xml
-./government/Env_Prot_Agen/bill-hepple.xml
-./government/Gen_Account_Office/d01591sp-hepple.xml
-./government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed-hepple.xml
-./government/Gen_Account_Office/pe1019-hepple.xml
-./government/Gen_Account_Office/Statements_Feb28-1997_volume-hepple.xml
-./911report/chapter-13.5-hepple.xml
-./911report/chapter-3-hepple.xml
-./911report/chapter-13.4-hepple.xml
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size +10M
+./technical/government/About_LSC/commission_report-hepple.xml
+./technical/government/Env_Prot_Agen/tech_adden-hepple.xml
+./technical/government/Env_Prot_Agen/multi102902-hepple.xml
+./technical/government/Env_Prot_Agen/bill-hepple.xml
+./technical/government/Gen_Account_Office/d01591sp-hepple.xml
+./technical/government/Gen_Account_Office/GovernmentAuditingStandards_yb2002ed-hepple.xml
+./technical/government/Gen_Account_Office/pe1019-hepple.xml
+./technical/government/Gen_Account_Office/Statements_Feb28-1997_volume-hepple.xml
+./technical/911report/chapter-13.5-hepple.xml
+./technical/911report/chapter-3-hepple.xml
+./technical/911report/chapter-13.4-hepple.xml
 ```
+In this example, we can see how the command allowed us to find files within the `./technical` directory that are greater than 10 megabytes. This is useful in finding large files and managing disk space. 
+
+## Example 2
+```
+dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -size -1k
+./technical/plos/pmed.0020191.txt
+./technical/plos/pmed.0020226.txt
+```
+In this example, we can see how the command allowed us to find files within the `./technical` directory that are less than 1 kilobyte. This is useful in finding small files that are redundant and don't have much need or use. 
+
+### `-type c`
 
 
 ### `-m -time n`
@@ -149,6 +164,6 @@ dgupta@Dhruvs-MacBook-Pro technical % find . -type f -size +10M
 ### `-newer checkfile`
 
 
-### `-type c`
+
 
 
