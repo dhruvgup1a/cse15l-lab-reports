@@ -240,8 +240,10 @@ dgupta@Dhruvs-MacBook-Pro written_2 % find ./technical -type f -maxdepth 4 -size
 ```
 In this example, we can how the command can be used with other find commands to filter the files in the `./technical` directory that are regular files, have a size greater than 10 megabytes, have a max depth of 4, and a min depth of 2. This is useful for filtering results to find really specific files that would take too much time to manually look for. This specific case is useful for evaluating file managment. 
 
+### Works Cited
 
-
+* https://docs.oracle.com/cd/E19253-01/806-7612/files-tbl-1/index.html
+* `man find`
 
 
 
