@@ -39,8 +39,9 @@
 ### Step 9 - Commit and push the resulting change to your Github account
 
 ![Image](lab4step9.png) 
+![Image](lab4step9p2.png)
 
-* Keys Pressed: `git add<tab><enter>git commit -m "fixed issue"<enter>`
-* I pressed `git add<tab><enter>` to stage the file `ListExamples.java` for a commit to the github repository (final command in terminal was `git add ListExamples.java`). After that I ran the `git commit` command with the message `"fixed issue"` in order update the repository on github with a message explaining the updates. 
+* Keys Pressed: `git add<tab><enter>git commit -m "fixed issue"<enter>git push<enter>`
+* I pressed `git add<tab><enter>` to stage the file `ListExamples.java` for a commit to the github repository (final command in terminal was `git add ListExamples.java`). After that I ran the `git commit` command with the message `"fixed issue"` in order to stage the changes for the repository with a message explaining the updates. After that, I ran the `git push` command to successfully update the repository on github. 
 
 
