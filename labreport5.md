@@ -6,7 +6,7 @@
 
 Dear Teaching Staff,
 
-I am currently trying to complete the practice skill demo 4 and I am confused with why the `ListExamples.java` file isn't passing all of the `test.sh` test cases. My best guess is that for the first test case, there is an operation that isn't completing because the JUnit test timed out. For the second test case, I am guessing that there is some logic error with how I add the values to the final list but I don't know how to fix it. Additionally, I am confused on how I can make changes to the file without having direct access to it. Can you please provide me with some direction on how to complete this step? 
+I am currently trying to complete the practice skill demo 4 and I am confused with why the `ListExamples.java` file isn't passing all of the `test.sh` test cases. My best guess is that for the first test case, there is an operation that isn't completing because the JUnit test timed out. For the second test case, I am guessing that there is some logic error with how I add the values to the final list but I don't know how to fix it. Can you please provide me with some direction on how to complete this step? 
 
 ```
 student@6bb576b4edf5:~/buggy$ bash test.sh
@@ -38,17 +38,21 @@ Tests run: 2,  Failures: 2
 
 ### A Response from a TA
 
-Sure! First of all, I would reccomend that you do some research on the `vim` command as it is a very useful command that allows users to handle bugs without having direct file access. When it comes to the symptoms you are experiencing in `testMerge`, I would suggest thinking about what would cause a program to time out. Generally, infinite loops are the most common cause of `TimeoutException`. So I would suggest looking at all of loop conditions and making sure that they have the appropriate terminate condition. Looking at the line number listed in the failure message can help (Should be visible in the line `at app//ListExamples.merge(ListExamples.java:42)`). 
+Sure! 
+
+When it comes to the symptoms you are experiencing in `testMerge`, I would suggest thinking about what would cause a program to time out. Generally, infinite loops are the most common cause of `TimeoutException`. So I would suggest looking at all of loop conditions and making sure that they have the appropriate terminate condition. Looking at the line number listed in the failure message can help (Should be visible in the line `at app//ListExamples.merge(ListExamples.java:42)`). 
 
 For the symptoms in `testFilter`, I would reccomend drawing out what exactly is happening in the code. It appears that the data is getting entered in the wrong order so I would reccomend double checking the `add` method. 
 
 ### Student Reply to TA
 
-Thanks for the help! Looks like I was able to fix the bug. the `vim` command allowed me to view and edit files within the terminal without needing direct access to the file or a proper IDE. 
+Thanks for the help! 
 
 For `testMerge`, I found the problem loop by looking at the line number in the JUnit failure message and noticed that the loop had was changing the incorrect variable after each iteration, resulting in the termination condition never being met. 
 
 For `testFilter`, I noticed that the method was adding the desired elements to the wrong position. So, I just rewrote it so that it added the elements to the end instead of the beginning of the returned `ArrayList`. 
+
+![Image](lab5pic2.png)
 
 ### The setup
 
