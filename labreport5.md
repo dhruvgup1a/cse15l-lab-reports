@@ -227,3 +227,4 @@ class ListExamples {
 
 ## Part 2 - Reflection
 
+The `vim` command was something that I learned this quarter that I found really interesting. Before this course, I always assumed that programmers were required to have direct access to programming files and a proper IDE to make changes to code. However, the `vim` command allows me to make quick changes to my programming files right through the terminal, completely bypassing the need for an IDE. Although the `vim` command isn't the most efficient way to edit code which I don't see myself using too often since it is much more convenient to use a proper IDE, it is still a cool command to learn this quarter that I will think of using when I only have access to a terminal. 
