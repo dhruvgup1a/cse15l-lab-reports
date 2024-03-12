@@ -12,7 +12,9 @@ I am currently trying to complete the practice skill demo 4 and I am confused wi
 
 ### A Response from a TA
 
+Sure! First of all, I would reccomend that you do some research on the `vim` command as it is a very useful command that allows users to handle bugs without having direct file access. When it comes to the symptoms you are experiencing in `testMerge`, I would suggest thinking about what would cause a program to time out. Generally, infinite loops are the most common cause of `TimeoutException`. So I would suggest looking at all of loop conditions and making sure that they have the appropriate terminate condition. Looking at the line number listed in the failure message can help (Should be visible in the line `at app//ListExamples.merge(ListExamples.java:42)`). 
 
+For the symptoms in `testFilter`, I would reccomend drawing out what exactly is happening in the code. It appears that the data is getting entered in the wrong order so I would reccomend double checking the `add` method. 
 
 ## Part 2 - Reflection
 
