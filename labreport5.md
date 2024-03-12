@@ -157,7 +157,22 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
 ```
 
-#### Contents of `ListExamples.java` after the fixes
+##### Don't have anything relevant to access in `ListExamples.class` and `TestListExamples.class`
+
+
+#### Command line that triggered the bug
+
+`bash test.sh`
+
+![Image](lab5pic1.png)
+
+#### What to edit to fix the bug
+
+The bug that was causing the error was located in the `ListExamples.java` file. So, upon examination, I had changed the line `result.add(0, s);` to `result.add(result.size(), s);` so that the `filter()` method produced the correct output. Also, I changed the line `index1 += 1;` in the third while loop in the `merge()` method to `index2 += 1;` to allow the loop to change something relevant to the termination condition. 
+
+The fixed `ListExamples.java` is below with the exact lines having comments explaining what I changed. 
+
+##### Contents of `ListExamples.java` after the fixes
 ```
 import java.util.ArrayList;
 import java.util.List;
