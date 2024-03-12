@@ -54,13 +54,13 @@ For `testFilter`, I noticed that the method was adding the desired elements to t
 
 #### Directory Structure
 
-- buggy/
-  - ListExamples.class
-  - ListExamples.java
-  - StringChecker.class
-  - TestListExamples.class
-  - TestListExamples.java
-  - test.sh
+- `buggy/`
+  - `ListExamples.class`
+  - `ListExamples.java`
+  - `StringChecker.class`
+  - `TestListExamples.class`
+  - `TestListExamples.java`
+  - `test.sh`
 
 #### Contents of each file before the fixes
 
